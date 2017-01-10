@@ -1,7 +1,7 @@
 {
   "name": "flow-inspect",
   "description": "Inspect the internal types of Flow in an easy to read format",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "bin": "bin.js",
   "author": "James Kyle <me@thejameskyle.com>",
