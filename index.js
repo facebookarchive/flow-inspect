@@ -6,12 +6,12 @@ const chalk = require('chalk');
 
 const INDENT = chalk.gray('  ');
 
-let hasKind = value => !!value.kind || !!value.name;
+let hasKind = value => value && (!!value.kind || !!value.name);
 let hasArrayOfKinds = value => Array.isArray(value) && value.every(hasKind);
 
 function maybePrint(key, value, indent) {
   if (key === 'kind' || key === 'name' || key === 'reason') return false;
-  if (typeof value !== 'object' ) return chalk.blue(value);
+  if (typeof value !== 'object' || value == null) return chalk.blue(value);
   if (hasKind(value)            ) return printValue(value, indent);
   if (hasArrayOfKinds(value)    ) return printList(value, indent);
   return printObject(value, indent);
