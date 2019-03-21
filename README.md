@@ -2,11 +2,11 @@
 
 Inspect the internal types of Flow in an easy to read format.
 
-```js
+```bash
 yarn global add flow-bin flow-inspect
 ```
 
-```js
+```bash
 flow dump-types --raw test.js | flow-inspect
 ```
 
